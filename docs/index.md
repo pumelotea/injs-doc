@@ -16,8 +16,6 @@ hero:
           text: 对接流程
           link: /flow/index.html
 
-
-
 features:
 - icon: 🤔️
   title: 用户体系
@@ -37,4 +35,13 @@ features:
 - icon: 🪄
   title: 用户事件
   details: 支持用户事件订阅
+
 ---
+
+<script setup>
+import ExampleList from './component/ExampleList.vue'
+</script>
+
+<ClientOnly>
+  <ExampleList/>
+</ClientOnly>
