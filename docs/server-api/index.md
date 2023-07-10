@@ -1,5 +1,8 @@
 # 服务端接口
 
+## 导航
+[[toc]]
+
 ::: tip 开放接口地址
 OpenAPI地址：`https://oapi.injs.jsxww.cn`
 
