@@ -1408,7 +1408,7 @@ OpenAPI地址：`https://oapi.injs.jsxww.cn`
 
 ## 开放应用积分扣减
 
-输出给in嘉善开放平台应用调用的任意积分数扣除的地址接口
+输出给in嘉善开放平台应用调用的任意积分数的扣减接口
 
 参数说明：
 
@@ -1434,6 +1434,54 @@ OpenAPI地址：`https://oapi.injs.jsxww.cn`
 | 签名     | signature | √    | string |     |
 | 扣除的积分数 | number    | √    | string |     |
 | openId | openId    | √    | string |     |
+
+:::
+
+返回结果
+
+```json
+{
+  "code": 0,
+  //返回结果
+  "msg": "success",
+  "data": "1552492824286523394",
+  //返回的日志id
+  "ok": true
+}
+```
+
+## 开放应用积分充值
+
+输出给in嘉善开放平台应用调用的任意积分数的充值接口
+
+参数说明：
+
+| 参数        | 类型     | 描述                                                          |
+| --------- | ------ |-------------------------------------------------------------|
+| appId     | String | AppId                                                       |
+| timestamp | Long   | 时间戳（13位）                                                    |
+| signature | String | 签名(签名规则（md5(appid + appsecret + timestamp+ number+openId））） |
+| number    | String | 充值的积分数                                                      |
+| openId    | String | OpenId                                                      |
+| eventId    | String | 第三方订单id                                                     |
+| remark    | String | 备注，会记录到用户的积分流水中                                             |
+
+::: tip 调用
+
+- 请求路径：`/open/Integral/any/add`
+- 请求方法：POST
+- 传参类型：JSON
+- JSON字段解释：
+
+| 域名      | 变量名       | 是否必传 | 格式     | 备注  |
+|---------| --------- | --- | ------ | --- |
+| appId   | appId     | √   | string |     |
+| 13位时间戳  | timestamp | √   | Long   |     |
+| 签名      | signature | √   | string |     |
+| 充值的积分数  | number    | √   | string |     |
+| openId  | openId    | √   | string |     |
+| 第三方订单id | eventId    |     | string |     |
+| 备注      | remark    | √   | string |     |
 
 :::
 
