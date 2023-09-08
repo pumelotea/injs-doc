@@ -96,7 +96,7 @@ OpenAPI地址：`https://oapi.injs.jsxww.cn`
 ::: tip 调用
 
 - 请求路径：`/auth/openid/validate?access_token=${access_token}&openid=${openid}&ticket=
-  ${ticket}&timestamp=${timestamp}&signaure=${signature}`
+  ${ticket}&timestamp=${timestamp}&signature=${signature}`
 - 请求方法：GET
 - 传参方式：Query
   :::
