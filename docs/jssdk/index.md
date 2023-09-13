@@ -132,7 +132,7 @@ injs.getUserInfo().then(res => {
 获取用户身份信息
 
 ```javascript
-injs.getUserInfo().then(res => {
+injs.getUserIdentityInfo().then(res => {
   //业务逻辑
   //
 }).catch(err => {
