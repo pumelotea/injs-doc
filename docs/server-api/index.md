@@ -1378,7 +1378,7 @@ OpenAPI地址：`https://oapi.injs.jsxww.cn`
 
 ::: tip 调用
 
-- 请求路径：`/open/Integral/invoke`
+- 请求路径：`/open/integral/invoke`
 - 请求方法：POST
 - 传参方式：JSON
 - JSON字段解释：
@@ -1422,7 +1422,7 @@ OpenAPI地址：`https://oapi.injs.jsxww.cn`
 
 ::: tip 调用
 
-- 请求路径：`/open/Integral/any/calc`
+- 请求路径：`/open/integral/any/calc`
 - 请求方法：POST
 - 传参类型：JSON
 - JSON字段解释：
@@ -1468,7 +1468,7 @@ OpenAPI地址：`https://oapi.injs.jsxww.cn`
 
 ::: tip 调用
 
-- 请求路径：`/open/Integral/any/add`
+- 请求路径：`/open/integral/any/add`
 - 请求方法：POST
 - 传参类型：JSON
 - JSON字段解释：
