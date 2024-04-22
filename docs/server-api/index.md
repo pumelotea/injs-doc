@@ -1813,3 +1813,50 @@ GET：`/open/user/info?openid=${openid}&appId=${appId}&sign=${sign}`
     "ok": true
 }
 ```
+
+## 开放应用推送文章
+
+输出给in嘉善开放平台应用调用的文章推送接口
+
+参数说明：
+
+| 参数        | 类型     | 描述                                                            |
+| --------- | ------ | ------------------------------------------------------------- |
+| appId     | String | AppId                                                         |
+| timestamp | Long   | 时间戳（13位）                                                      |
+| signature | String | 签名(签名规则（md5(appid + appsecret + timestamp+openArticleId））） |
+| openArticleId | String | 第三方文章id                                                          |
+
+
+- 请求路径：`/open/article/add`
+- 请求方法：POST
+- 传参方式：JSON
+- JSON字段解释：
+
+| 中文描述   | 变量名       | 是否必传 | 格式     | 备注  |
+|--------| --------- | ---- | ------ | --- |
+| appId  | appId     | √    | string |     |
+| 13位时间戳 | timestamp | √    | Long   |     |
+| 签名     | signature | √    | string |     |
+| 标题   | title | √    | string |     |
+| 正文 | content    | √    | string |     |
+| 发布时间 | publishTime    | √    | string |yyyy-MM-dd HH:mm:ss     |
+| 封面图 | url    | √    | string |     |
+| 作者手机号 | authorPhone    | √    | string |     |
+| 作者 | authorName    |     | string |     |
+| 栏目id | categoryId    | √    | string |     |
+| 第三方id | openArticleId    | √    | string |     |
+
+
+返回结果
+
+```json
+{
+  "code": 0,
+  //返回code
+  "msg": "success",
+  "data": "1552492483256053762",//文章id
+  //返回的日志id
+  "ok": true
+}
+```
