@@ -1594,6 +1594,49 @@ OpenAPI地址：`https://oapi.injs.jsxww.cn`
   "ok": true
 }
 ```
+## 开放应用获取用户对于文章的评论和点赞状态
+
+in嘉善开放平台应用通过该接口获取开放应用用户是否对于一篇文章曾经评论过与点赞过的信息
+
+支持openId与userId中任其一项进行检索
+
+| 参数    | 类型     | 描述    |
+| ----------|----------|---------|
+|   appId   |   String  |   AppId   |
+|   userId  |   String  |   用户id    |
+|   openId  |   String  |   OpenId  |
+|   articleId   |   String  |   文章id    |
+|   signature   |   String  |   签名(签名规则（md5(appId + appSecret + userId + openId + articleId）））|
+
+::: tip 调用
+
+- 请求路径：`/open/user/islike/or/comment/search`
+- 请求方法：GET
+- 传参方式：Query
+- Query字段解释：
+
+| 域名     | 变量名       | 是否必传 | 格式     | 备注  |
+| --------- | --------- | --------- | ---------- | -------- |
+|   appId   |   appId   |   √   |   String  |   |
+|   用户id    |   userId  |   ×   |   String  |   与openId至少传一项    |
+|   开放应用id  |   openId  |   ×   |   String  |   与userId至少传一项    |
+|   文章id    |   articleId   |   √   |   String  |   |
+|   签名  |   signature   |   √   |   String  |   |
+:::
+
+返回结果
+```json
+{
+  "code": 0,
+    "msg": "success",
+    "data": {
+        "commentStatus": true,
+        "isLikeStatus": true
+    }, 
+    "ok": true
+}
+
+```
 
 ## 开放应用标签同步
 
