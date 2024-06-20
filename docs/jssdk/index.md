@@ -7,7 +7,7 @@
 ## SDK下载地址
 
 ```
-https://oss.injs.jsxww.cn/jssdk/injs.umd_1.1.0.js
+https://oss.injs.jsxww.cn/jssdk/injs.umd_1.2.0.js
 ```
 
 jssdk是in嘉善app提供的H5接入开发工具包，其中包含了提供的一系列方法。通过这些方法可以调用in嘉善app的一些开放能力，jssdk默认是挂载在全局变量injs上。
