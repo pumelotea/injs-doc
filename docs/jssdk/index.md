@@ -353,3 +353,18 @@ injs.goShanHeadLine()
 ```javascript
 injs.openArticle(id)
 ```
+
+## 获取本次扫码的内容
+```javascript
+injs.getScanResult().then(res => {
+  //业务逻辑
+}).catch(err => {
+  //错误处理
+})
+```
+
+## 打开分享弹出面板
+```js
+
+injs.shareOpen(title: string, summary: string, link: string, picture: string)
+```
