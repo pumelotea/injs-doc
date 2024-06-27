@@ -32,6 +32,7 @@ export default defineConfig({
           {text: '服务端接口', link: '/server-api/index.html'},
           {text: 'Demo代码', link: '/demo/index.html'},
           {text: '农信银行回调接口开发', link: '/rxyh/index.html'},
+          {text: '扩展', link: '/ext/index.html'},
         ]
       }
     ],
